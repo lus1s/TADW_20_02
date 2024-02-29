@@ -10,15 +10,17 @@
             let nome = document.getElementById("nome").value;
             
             if (nome == "") {
-                alert("Nome errado, digite novamente");
+                document.getElementById("nome").focus();
+                document.getElementById("aviso_nome").innerHTML = "Preencha o campo nome";
+                // alert("Nome errado, digite novamente");
 
                 return false;
             }
-            else{
-                alert("ok");
+            // else{
+            //     alert("ok");
 
-                return true;
-            }
+            //     return true;
+            // }
         }
     </script>
 </head>
@@ -26,10 +28,12 @@
     <center>
         <h1>NÃO AGUENTO MAIS FOURMULÁRIO...</h1>
     </center>
-    <form onsubmit="validar()">
+    <form onsubmit="return validar()">
         <ul>
             <li>Nome</li>
-            <input type="text" name="nome" id="nome"> <br><br>
+            <input type="text" name="nome" id="nome"> <br>
+            <div id="aviso_nome"></div>
+            <br>
             <li>Sobrenome</li>
             <input type="text" name="sobrenome" id=""> <br><br>
             <li>Senha</li>
