@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <script>
+        function validar(){
+
+            let nome = document.getElementById("nome").value;
+            
+            if (nome == "") {
+                alert("Nome errado, digite novamente");
+
+                return false;
+            }
+            else{
+                alert("ok");
+
+                return true;
+            }
+        }
+    </script>
 </head>
 <body>
     <center>
         <h1>NÃO AGUENTO MAIS FOURMULÁRIO...</h1>
     </center>
-    <form action="">
+    <form onsubmit="validar()">
         <ul>
             <li>Nome</li>
-            <input type="text" name="nome" id=""> <br><br>
+            <input type="text" name="nome" id="nome"> <br><br>
             <li>Sobrenome</li>
             <input type="text" name="sobrenome" id=""> <br><br>
             <li>Senha</li>
